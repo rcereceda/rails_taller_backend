@@ -1,0 +1,37 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: iPhone 6S
+  price: 500000
+  premium: true
+  category_id: one
+
+two:
+  name: Macbook Pro
+  price: 599000
+  premium: true
+  category_id: one
+
+three:
+  name: Frazada
+  price: 19990
+  premium: false
+  category_id: two
+
+four:
+  name: Almohada
+  price: 5990
+  premium: false
+  category_id: two
+
+five:
+  name: Bicicleta
+  price: 195000
+  premium: false
+  category_id: three
+
+six:
+  name: Balón
+  price: 15900
+  premium: false
+  category_id: three
