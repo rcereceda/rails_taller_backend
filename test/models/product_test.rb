@@ -10,7 +10,7 @@ class ProductTest < ActiveSupport::TestCase
   end
 
   test "product must have price" do
-  	@product.price = nil
+  	@product.price = 0
   	assert_not @product.valid?, "El producto debe tener precio"
   end
 
@@ -20,11 +20,13 @@ class ProductTest < ActiveSupport::TestCase
 	end
 
 	test "product has premium with default value" do
-		p = Product.new(name: 'Celular', category_id: 1)
+		p = Product.new(name: 'Celular', category_id: 1, premium: nil)
 		assert_not p.premium?, "El producto debe tener el campo premium en false por defecto"
 	end
 
 	test "includes premiums products" do
-		assert_not Product.premiums.find { |p| p.premium = false } , "El scope debe devolver sólo los productos premiums"
+		#assert_not Product.premiums.find { |p| p.premium = false } , "El scope debe devolver sólo los productos premiums"
+		values = Product.premiums.map(&:premium)
+		assert_not_includes(values, false)
 	end
 end

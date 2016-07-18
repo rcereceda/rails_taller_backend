@@ -1,0 +1,17 @@
+LOG:  database system was shut down at 2016-07-14 21:57:33 CLT
+LOG:  MultiXact member wraparound protections are now enabled
+LOG:  database system is ready to accept connections
+LOG:  autovacuum launcher started
+LOG:  autovacuum launcher shutting down
+LOG:  received smart shutdown request
+LOG:  shutting down
+LOG:  database system is shut down
+LOG:  database system was shut down at 2016-07-15 21:54:05 CLT
+LOG:  MultiXact member wraparound protections are now enabled
+LOG:  database system is ready to accept connections
+LOG:  autovacuum launcher started
+FATAL:  database "tienda" does not exist
+ERROR:  null value in column "created_at" violates not-null constraint
+DETAIL:  Failing row contains (10, Tecnología, null, null, null).
+STATEMENT:  INSERT INTO categories (name) VALUES ('Tecnología'), ('Dormitorio'), ('Deportes')
+	;

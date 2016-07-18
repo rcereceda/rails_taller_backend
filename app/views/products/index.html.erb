@@ -1,0 +1,10 @@
+<h1>Productos</h1>
+
+<ul>
+<% @products.each do |p| %>
+	<li>
+		<%= p.name %>, Categoría: <%= p.category.name %>
+		<a href="<%= delete_path(p.id) %>" data-method="delete">Borrar</a>
+	</li>
+<% end %>
+</ul>

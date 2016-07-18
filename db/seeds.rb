@@ -6,11 +6,10 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-Product.destroy_all
+#Product.destroy_all
 Category.destroy_all
 
-
-categories = Category.create([{ name: 'Tecnología' }, { name: 'Dormitorio' }, { name: 'Deportes' }])
+categories = Category.create([{ name: 'Tecnología', discount: 10 }, { name: 'Dormitorio', discount: 25 }, { name: 'Deportes', discount: 5 }])
 
 category01 = Category.where(name:'Tecnología').take
 category02 = Category.where(name:'Dormitorio').take
