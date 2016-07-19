@@ -15,3 +15,11 @@ ERROR:  null value in column "created_at" violates not-null constraint
 DETAIL:  Failing row contains (10, Tecnología, null, null, null).
 STATEMENT:  INSERT INTO categories (name) VALUES ('Tecnología'), ('Dormitorio'), ('Deportes')
 	;
+ERROR:  column registers.serial does not exist at character 40
+STATEMENT:  SELECT COUNT(*) FROM "registers" WHERE "registers"."serial" = 1
+ERROR:  column inventories.name does not exist at character 50
+STATEMENT:  SELECT  "inventories".* FROM "inventories" WHERE "inventories"."name" = 'neumático goodyear' LIMIT 1
+LOG:  autovacuum launcher shutting down
+LOG:  received smart shutdown request
+LOG:  shutting down
+LOG:  database system is shut down
